@@ -1,0 +1,44 @@
+{
+	"name": "@webacad/material-confirm-dialog",
+	"description": "Angular service for creating confirm dialogs in @angular/material",
+	"version": "0.0.1",
+	"keywords": [
+		"angular",
+		"material",
+		"confirm",
+		"dialog"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:Web-ACAD/js-material-confirm-dialog.git"
+	},
+	"author": {
+		"name": "David Kudera",
+		"email": "kudera.d@gmail.com",
+		"url": "https://www.davidkudera.com"
+	},
+	"main": "./lib/main.js",
+	"dependencies": {
+		"@angular/animations": ">=5.0.0",
+		"@angular/cdk": ">=5.0.0",
+		"@angular/common": ">=5.0.0",
+		"@angular/core": ">=5.0.0",
+		"@angular/forms": ">=5.0.0",
+		"@angular/material": ">=5.0.0",
+		"@angular/platform-browser": ">=5.0.0",
+		"rxjs": ">=5.0.0"
+	},
+	"devDependencies": {
+		"@angular/compiler": ">=5.0.0",
+		"@angular/compiler-cli": ">=5.0.0",
+		"ng-packagr": "^2.2.0",
+		"tslint": "^5.9.1",
+		"typescript": "^2.7.2"
+	},
+	"scripts": {
+		"build": "ng-packagr -p ng-package.json",
+		"lint": "tslint --project tsconfig.json",
+		"prepublish": "yarn run build"
+	}
+}
