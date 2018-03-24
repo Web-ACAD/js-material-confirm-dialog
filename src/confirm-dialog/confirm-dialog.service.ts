@@ -28,7 +28,7 @@ export class WaMatConfirmDialog
 	) {}
 
 
-	public open(message: string, options: WaMatConfirmDialogOptions): MatDialogRef<WaMatConfirmDialogComponent>
+	public open(message: string, options: WaMatConfirmDialogOptions = {}): MatDialogRef<WaMatConfirmDialogComponent>
 	{
 		const copyOptions: WaMatConfirmDialogOptions = {
 			trueButtonTitle: options.trueButtonTitle || this.defaults.trueButtonTitle || TRUE_BUTTON_TITLE_FALLBACK,
