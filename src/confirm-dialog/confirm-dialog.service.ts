@@ -1,7 +1,7 @@
 import {Injectable, Inject, Optional} from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
-import {WaMatConfirmDialogComponent} from './confirm-dialog.component';
+import {WaMatConfirmDialogComponent, WaMatConfirmDialogData} from './confirm-dialog.component';
 import {WaMatConfirmDialogDefaults, WA_MAT_CONFIRM_DIALOG_DEFAULTS} from './confirm-dialog-defaults';
 
 
@@ -30,20 +30,18 @@ export class WaMatConfirmDialog
 
 	public open(message: string, options: WaMatConfirmDialogOptions = {}): MatDialogRef<WaMatConfirmDialogComponent>
 	{
-		const copyOptions: WaMatConfirmDialogOptions = {
+		const data: WaMatConfirmDialogData = {
+			message: message,
 			trueButtonTitle: options.trueButtonTitle || this.defaults.trueButtonTitle || TRUE_BUTTON_TITLE_FALLBACK,
 			falseButtonTitle: options.falseButtonTitle || this.defaults.falseButtonTitle || FALSE_BUTTON_TITLE_FALLBACK,
 		};
 
 		if (typeof options.title !== 'undefined') {
-			copyOptions.title = options.title;
+			data.title = options.title;
 		}
 
-		return this.$dialog.open(WaMatConfirmDialogComponent, {
-			data: {
-				message: message,
-				options: copyOptions,
-			},
+		return this.$dialog.open<WaMatConfirmDialogComponent, WaMatConfirmDialogData>(WaMatConfirmDialogComponent, {
+			data: data,
 		});
 	}
 
