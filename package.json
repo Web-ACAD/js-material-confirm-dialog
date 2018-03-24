@@ -1,7 +1,7 @@
 {
 	"name": "@webacad/material-confirm-dialog",
 	"description": "Angular service for creating confirm dialogs in @angular/material",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"keywords": [
 		"angular",
 		"material",
