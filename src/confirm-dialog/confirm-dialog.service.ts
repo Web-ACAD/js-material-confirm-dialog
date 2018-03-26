@@ -22,10 +22,15 @@ export class WaMatConfirmDialog
 {
 
 
+	private defaults: WaMatConfirmDialogDefaults;
+
+
 	constructor(
 		private $dialog: MatDialog,
-		@Inject(WA_MAT_CONFIRM_DIALOG_DEFAULTS) @Optional() private defaults: WaMatConfirmDialogDefaults = {},
-	) {}
+		@Inject(WA_MAT_CONFIRM_DIALOG_DEFAULTS) @Optional() defaults: WaMatConfirmDialogDefaults,
+	) {
+		this.defaults = defaults || {};
+	}
 
 
 	public open(message: string, options: WaMatConfirmDialogOptions = {}): MatDialogRef<WaMatConfirmDialogComponent>
