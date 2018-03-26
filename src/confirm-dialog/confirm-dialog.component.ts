@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, ChangeDetectionStrategy} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
@@ -14,6 +14,7 @@ export declare interface WaMatConfirmDialogData
 @Component({
 	selector: 'wa-mat-confirm-dialog',
 	templateUrl: './confirm-dialog.component.html',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WaMatConfirmDialogComponent
 {
