@@ -5,3 +5,4 @@ tsconfig.json
 tslint.json
 ng-package.json
 package-lock.json
+lib.tgz
